@@ -1,5 +1,5 @@
 <h1 align="center">React-Kit</h1>
-<div align="center"><img src="./src/assets/images/logo.png" width="200px" height="200px"/></div>
+<div align="center"><img src="./client/src/assets/images/logo.png" width="200px" height="200px"/></div>
 <div align="center">An extensive collection of npm packages to work with React!</div>
 
 
