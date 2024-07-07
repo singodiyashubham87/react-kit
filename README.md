@@ -1,60 +1,50 @@
----
+<h1 align="center">React-Kit</h1>
+<div align="center"><img src="./src/assets/images/logo.png" width="350px" height="200px"/></div>
+<div align="center">An extensive collection of npm package to work with React!</div>
 
 
-<p align="center">
-    <!--     You can add your logo here -->
-    <img src="https://www.amug.com/wp-content/uploads/2016/09/you-logo-here-300x106.png" />
-</p>
-<p align="center">
-  <!-- You can add your badges here -->
-  <!-- If you have never added badges, head over to https://img.shields.io/badges/static-badge, follow the instructions and generate URL links to add below -->
-  <img src="https://img.shields.io/badge/npm-v.0.21.0-red"  />
-  <img src="https://img.shields.io/badge/LICENSE-MIT-green"  />
-</p>
+## Tech Stack
 
-_The above logo and badges are optional._
+- **React:** Frontend framework for building user interfaces.
+- **TailwindCSS:** Utility-first CSS framework for styling.
 
-### :star2: About
-- Write a short introduction to the project.
-- Try to keep it concise 
+## Getting Started
+Follow these steps to get started with GitWrap:
 
+### Prerequisite
 
-###  :movie_camera: Demo
-- After the initial introduction, please add a screen recording of your project.
-- If the video's size is too large, it is a good idea to post your video on YouTube and attach a picture that redirects to the video (as shown below).
+- Node.js (https://nodejs.org/) installed on your machine.
 
-<p align="center">
-    <a href="https://youtu.be">
-        <img src="https://img.freepik.com/free-vector/modern-red-video-media-player-template_1017-23409.jpg"/>
-    </a>
-</p>
+### Installation
 
+1. Clone the repository:
+```bash
+git clone https://github.com/singodiyashubham87/React-Kit.git
+cd React-Kit
+```
+   
+2. Install dependencies:
+```bash
+npm install
+```
+3. Start the app:
+```bash
+npm run dev
+  ```
+  
+## Author
+* <a href="https://shubham-s-socials.vercel.app/"><i>Shubham Singodiya</i></a>
 
+## Contributors
 
-$~$
+<div>
+   <a href="https://github.com/singodiyashubham87/GitWrap/graphs/contributors">
+   <img src="https://contrib.rocks/image?repo=singodiyashubham87/GitWrap"/>
+   </a>
+</div>
 
-###  :outbox_tray: Set up
-- These are the steps required to install the project.
-- Mention, if needed, requirements based on the different OS type: `<Windows/Linux/Mac>`.
+## License
+This project is licensed under the MIT License.
 
-_E.g_
-
-1. Get a API Key at [website](example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/YOUR_USERNAME/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install npm@latest -g
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'YOUR API KEY HERE';
-   ```
-
-$~$
-
-### :email: Contact 
-- Add your Email and Discord
-- You can also share other social media links if you want to. 😄
+## Support
+Support the project by starring the repository.
