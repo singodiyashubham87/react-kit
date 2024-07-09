@@ -7,7 +7,6 @@ const packageController = {
   },
   getAllPackages: async (req, res, next) => {
     try {
-      console.log("Trying to get all packages..");
       // Query all documents from the "packages" collection
       const packages = await Package.find();
       res.send(packages);
