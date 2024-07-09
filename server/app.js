@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // ROUTES
-const packageRoute = require("./routes/packageRoute");
+const packageRoute = require("./routes/packageRoute.js");
 
 // ENDPOINTS
 app.use("/package", packageRoute);

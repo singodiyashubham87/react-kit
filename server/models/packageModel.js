@@ -18,6 +18,6 @@ const packageSchema = new mongoose.Schema({
 });
 
 // Create a model from the schema
-const Package = mongoose.model("Package", packageSchema);
+const Package = mongoose.model("packages", packageSchema);
 
 module.exports = Package;

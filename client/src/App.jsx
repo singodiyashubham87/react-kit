@@ -5,15 +5,18 @@ import { Button } from "./components/ui/button";
 import { Input } from "./components/ui/input";
 import { Toaster } from "./components/ui/sonner";
 import { toast } from "sonner";
-import { packages } from "./constant/packages";
+import { BASE_URL } from "./constant/BASE_URL";
 import Canvas from "./components/Canvas";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
+import Loader from "./components/Loader.jsx";
 
 function App() {
   const defaultPackagesToShow = 12;
+  const [loader, setLoader] = useState(false);
   const [count, setCount] = useState(0);
-  const [filteredPackages, setFilteredPackages] = useState(packages);
+  const [packages, setPackages] = useState([]);
+  const [filteredPackages, setFilteredPackages] = useState([]);
 
   const handleSearchChange = (searchVal) => {
     if (searchVal.toLowerCase() == "all") {
@@ -23,8 +26,8 @@ function App() {
     setFilteredPackages(
       packages.filter(
         (p) =>
-          p.name.toLowerCase().includes(searchVal.toLowerCase()) ||
-          p.category.toLowerCase().includes(searchVal.toLowerCase())
+          p?.name?.toLowerCase().includes(searchVal?.toLowerCase()) ||
+          p?.category?.toLowerCase().includes(searchVal?.toLowerCase())
       )
     );
   };
@@ -44,9 +47,21 @@ function App() {
   };
 
   useEffect(() => {
+    const fetchAllPackages = async () => {
+      setLoader(true);
+      const res = await fetch(`${BASE_URL}/package/all-packages`);
+      const data = await res.json();
+      setPackages(data);
+      setFilteredPackages(data);
+      setTimeout(() => {
+        setLoader(false);
+      }, 500);
+    };
+    fetchAllPackages();
     setCount(defaultPackagesToShow);
-    setFilteredPackages(packages);
   }, []);
+
+  if (loader) return <Loader />;
 
   return (
     <>
@@ -62,17 +77,16 @@ function App() {
           <div className="cards w-full flex flex-col items-center py-8 gap-4 z-20">
             <ButtonsList handleSearchChange={handleSearchChange} />
             <div className="w-full flex flex-wrap mt-4 items-stretch">
-              {filteredPackages.slice(0, count).length < 1 ? (
+              {filteredPackages?.slice(0, count).length < 1 ? (
                 <div className="w-full text-center">
-
-                <p className="text-xl uppercase text-center bg-gray-600 inline text-white p-4">
-                  No packages found
-                </p>
+                  <p className="text-xl uppercase text-center bg-gray-600 inline text-white p-4">
+                    No packages found
+                  </p>
                 </div>
               ) : (
                 filteredPackages
-                  .slice(0, count)
-                  .map((ele) => (
+                  ?.slice(0, count)
+                  ?.map((ele) => (
                     <Card
                       id={ele.id}
                       key={ele.id}
