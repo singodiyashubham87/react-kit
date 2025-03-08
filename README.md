@@ -13,7 +13,7 @@ Follow these steps to get started with GitWrap:
 
 ### Prerequisite
 
-- Node.js (https://nodejs.org/) installed on your machine.
+- Node.js v18.0+ (https://nodejs.org/) installed on your machine.
 
 ### Installation
 
